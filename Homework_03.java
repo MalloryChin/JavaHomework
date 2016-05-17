@@ -91,7 +91,7 @@ public class Homework_03 {
 				ran = (int) (Math.random() * LOTTERY);
 			}				
 			System.out.print(goodArray[ran]+ "\t");
-			goodArray[i] = 0;				
+			goodArray[ran] = 0;				
 		}
 		
 	}
