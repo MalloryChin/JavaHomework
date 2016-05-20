@@ -1,0 +1,37 @@
+#1
+create view EMP_VU
+as 
+select empno, ename EMPLOYEE, deptno
+from emp;
+
+#2
+select * from EMP_VU;
+
+#3
+select employee, deptno
+from emp_vu;
+
+#4
+create view dept20(EMPLOYEE_ID, EMPLOYEE, DEPARTMENT_ID)
+as
+select empno, ename, deptno
+from emp
+where deptno = 20
+with check option;
+
+#5
+desc dept20;
+select * from dept20;
+
+#6
+update dept20
+set DEPARTMENT_ID = 30
+where EMPLOYEE = 'Smith';
+
+#7
+create view SALARY_VU(Employee, Department, Salary, Grade)
+as
+select ename, dname, sal, grade
+from emp e join dept d on e.deptno = d.deptno
+           join salgrade sg on e.sal between sg.losal and sg.hisal;
+ 
