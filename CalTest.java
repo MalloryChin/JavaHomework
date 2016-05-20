@@ -1,3 +1,4 @@
+package Homework;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -13,16 +14,15 @@ public class CalTest {
 
 	public static void main(String[] args) {
 		int x, y;
-		boolean b = true;
 		Scanner sc = new Scanner(System.in);
-		while(b) {
+		while(true) {
 			try {
 				System.out.println("請輸入x的值:");
 				x = sc.nextInt();
 				System.out.println("請輸入y的值:");
 				y = sc.nextInt();
 				System.out.println(x + "的" + y + "次方等於" + powerXY(x, y));
-				b = false;
+				break;
 			} catch (InputMismatchException e) {
 				System.out.println("輸入格式不正確");
 				sc = new Scanner(System.in);
