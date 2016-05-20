@@ -1,10 +1,15 @@
+//Homework_05↓↓↓↓第4題↓↓↓↓
 package Homework;
 
 public class MyRectangleMain {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		MyRectangle mr = new MyRectangle();
+		mr.setWidth(10d);
+		mr.setDepth(20d);
+		System.out.println(mr.getArea());
+		MyRectangle mr2 = new MyRectangle(10d,20d);
+		System.out.println(mr2.getArea());
 	}
 
 }
