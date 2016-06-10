@@ -1,3 +1,5 @@
+//請寫一隻程式,能夠亂數產生10個1~1000的整數,並寫入一個名為Data.txt
+//的檔案裡 (請參考本章講義第23頁,使用append方式觀察效果)
 package Homework;
 
 import java.io.*;
@@ -5,12 +7,15 @@ import java.io.*;
 public class Homework_07_3{
 	public static void main(String[] args) throws Exception{
 		int[] ran = new int[10];
-		FileOutputStream fos = new FileOutputStream("Data.txt", true);//append = true
+		FileOutputStream fos = new FileOutputStream("Data.txt", true);
 		BufferedOutputStream bos = new BufferedOutputStream(fos);
 		PrintStream ps = new PrintStream(bos);
 		for(int i = 0 ; i < ran.length ; i++){
 			ran[i] = (int)(Math.random() * 1000) + 1;
-			ps.println(ran[i]);
+			ps.println(ran[i]);//Prints an integer.
+			//↓方法二
+			//ps.append(String.valueOf(ran[i]));
+			//ps.println();
 		}
 		//筆記:PrintStream的print(int i) vs.　FileOutputStream的write(int b)
 		//ps.print(83);//Prints an integer.It'll show 83 in the file

@@ -1,3 +1,5 @@
+//承上題,請寫一個程式,能讀出Object.dat這四個物件,並執行speak()方法
+//觀察結果如何 (請利用多型簡化本題的程式設計)
 package Homework;
 
 import java.io.*;

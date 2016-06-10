@@ -1,3 +1,4 @@
+//請寫一個程式,可以在讀入一個檔案後,顯示有多少個位元組
 package Homework;
 
 import java.io.FileInputStream;
