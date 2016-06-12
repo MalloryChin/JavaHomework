@@ -35,12 +35,17 @@ public class Homework_10_2 {
 		case "1":
 			Format dfm1 = new DecimalFormat("#,###.00");
 			System.out.println(dfm1.format(number));
+			System.out.printf("%,.2f", number);
 			break;
 		case "2":
-			System.out.printf("%.0f%%",number * 100);
+			Format dfm2 = new DecimalFormat("#%");
+			System.out.println(dfm2.format(number));
+			System.out.printf("%.0f%%", number * 100);
 			break;
 		case "3":
-			System.out.printf("%e",number);
+			Format dfm3 = new DecimalFormat("0.###E0");
+			System.out.println(dfm3.format(number));
+			System.out.printf("%.3e", number);
 			break;
 		}
 	}
